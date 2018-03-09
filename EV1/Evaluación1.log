@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.23)  9 MAR 2018 05:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.23)  9 MAR 2018 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -605,62 +605,74 @@ File: graf3.png Graphic file (type png)
  <use graf3.png>
 Package pdftex.def Info: graf3.png used on input line 234.
 (pdftex.def)             Requested size: 227.62164pt x 227.62152pt.
- [9 <./graf2.png> <./graf3.png>] <dos1.png, id=59, 422.57875pt x 255.95625pt>
-File: dos1.png Graphic file (type png)
- <use dos1.png>
-Package pdftex.def Info: dos1.png used on input line 275.
-(pdftex.def)             Requested size: 227.62814pt x 227.62068pt.
+ [9 <./graf2.png> <./graf3.png>] <two1.png, id=59, 418.56375pt x 293.095pt>
+File: two1.png Graphic file (type png)
+ <use two1.png>
+Package pdftex.def Info: two1.png used on input line 263.
+(pdftex.def)             Requested size: 227.61774pt x 227.62032pt.
 
-[10] <dos2.png, id=63, 426.59375pt x 259.97125pt>
-File: dos2.png Graphic file (type png)
- <use dos2.png>
-Package pdftex.def Info: dos2.png used on input line 312.
-(pdftex.def)             Requested size: 227.62979pt x 227.62105pt.
- [11 <./dos1.png>]
+[10 <./two1.png>] <two2.png, id=64, 406.51875pt x 288.07625pt>
+File: two2.png Graphic file (type png)
+ <use two2.png>
+Package pdftex.def Info: two2.png used on input line 290.
+(pdftex.def)             Requested size: 227.61792pt x 227.63048pt.
 
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.333 \\
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+[11 <./two2.png>] <lim1.png, id=69, 416.55624pt x 290.08376pt>
+File: lim1.png Graphic file (type png)
+ <use lim1.png>
+Package pdftex.def Info: lim1.png used on input line 318.
+(pdftex.def)             Requested size: 227.62566pt x 227.62329pt.
 
 
-! LaTeX Error: There's no line here to end.
+! LaTeX Error: \begin{document} ended by \end{center}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.334 
-      
+l.338 \end{center}
+                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[12 <./dos2.png>] [13] (./Evaluación1.aux) ) 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.338 \end{center}
+                  
+Things are pretty mixed up, but I think the worst is over.
+
+<lim2.png, id=70, 414.54875pt x 270.00874pt>
+File: lim2.png Graphic file (type png)
+ <use lim2.png>
+Package pdftex.def Info: lim2.png used on input line 340.
+(pdftex.def)             Requested size: 227.61665pt x 227.62566pt.
+ [12 <./lim1.png>])
+Runaway argument?
+^^M^^MEsta instrucción hace más chica la imagen para poder enfocarn\ETC.
+! File ended while scanning use of \@xverbatim.
+<inserted text> 
+                \par 
+<*> Evaluación1.tex
+                    
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
+! Emergency stop.
+<*> Evaluación1.tex
+                    
+*** (job aborted, no legal \end found)
+
+ 
 Here is how much of TeX's memory you used:
- 2210 strings out of 493029
- 29281 string characters out of 6136234
+ 2217 strings out of 493029
+ 29359 string characters out of 6136234
  85453 words of memory out of 5000000
- 5693 multiletter control sequences out of 15000+600000
+ 5700 multiletter control sequences out of 15000+600000
  30748 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,6n,23p,393b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/
-lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-2.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmtt10.pfb>
-Output written on Evaluación1.pdf (13 pages, 540772 bytes).
-PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!

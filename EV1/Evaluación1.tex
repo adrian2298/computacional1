@@ -242,74 +242,52 @@ La primera es sobre la altura del agua y sanilalidad, cómo influye el tiempo en
 
 
 \begin{verbatim}
-
-plt.plot_date(x=df2.Ndate, y=df2.CondH, fmt="b-")
-plt.plot_date(x=df2.Ndate, y=df2.sal, fmt="r-")
-plt.title("")
-plt.ylabel("")
-plt.grid(True)
-plt.show()
-
-\end{verbatim}
-
-o puede ser de la siguiente forma:
-
-\begin{verbatim}
 fig, ax1 = plt.subplots()
-a=df1.HIGHT
-b=df2.Date
-ax1.plot(t,a, 'b-')
-axa1.set_xlabel('time (s)')
+a=df1.Met
+b=df2.sal
+t=df1.Date
+ax1.plot(t, a, 'b-')
+ax1.set_xlabel('time (s)')
 
-ax2 = ax1. twinx()
-ax2.plot(t,b, 'r.')
-ax2.set_ylabel('nivel del may salinidad', color='r')
+ax2 = ax1.twinx()
+ax2.plot(t, b, 'r.')
+ax2.set_ylabel('nivel del mar y salanidad', color='r')
 fig.tight_layout()
 
-plt.show
+plt.show()
 \end{verbatim}
 
 
 \begin{center}
 
-\includegraphics[width=8cm, height=8cm]{dos1.png}
+\includegraphics[width=8cm, height=8cm]{two1.png}
 \end{center}
 
 Ésta es sobre la altura y la temperatura respecto al tiempo
 
-\begin{verbatim}
-
-plt.plot_date(x=df2.Ndate, y=df2.CondH, fmt="b-")
-plt.plot_date(x=df2.Ndate, y=df2.temp, fmt="r-")
-plt.title("")
-plt.ylabel("")
-plt.grid(True)
-plt.show()
-
-\end{verbatim}
-
-O puede ser
 
 \begin{verbatim}
+
 fig, ax1 = plt.subplots()
-a=df1.HIGHT
+a=df1.Met
 b=df2.temp
-ax1.plot(t,a, 'b-')
-axa1.set_xlabel('time (s)')
+t=df1.Date
+ax1.plot(t, a, 'b-')
+ax1.set_xlabel('time (s)')
 
-ax2 = ax1. twinx()
-ax2.plot(t,b, 'r.')
+ax2 = ax1.twinx()
+ax2.plot(t, b, 'r.')
 ax2.set_ylabel('nivel del mar y temperatura', color='r')
 fig.tight_layout()
 
-plt.show
+plt.show()
 \end{verbatim}
 
 
 
 \begin{center}
 
-\includegraphics[width=8cm, height=8cm]{dos2.png}
+\includegraphics[width=8cm, height=8cm]{two2.png}
 
 \end{center}
 En las gráficas anteiriores no se pueden ver muchas dicrepancias, para ello se usará un operador a continuación.
@@ -317,34 +295,51 @@ En las gráficas anteiriores no se pueden ver muchas dicrepancias, para ello se 
 Al final, se quiere aplicar el xlim para poder ver si hay diferencias entre las dos gráficas anteriores, debido a que su espaciamiento es muy grande y casi no se puede distinguir entre ellos. Para ello se usa el comando xlim más el límite deseado para poder observar la discrepancia entre ellos.
 
 \begin{verbatim}
+fig, ax1 = plt.subplots()
+a=df1.Met
+b=df2.sal
+t=df1.Date
+ax1.plot(t, a, 'b-')
+ax1.set_xlabel('time (s)')
 
-df01=plt.plot_date(x=df2.Ndate, y=df2.CondH, fmt="b-")
-df02=plt.plot_date(x=df2.Ndate, y=df2.temp, fmt="r-")
-plt.title("")
+ax2 = ax1.twinx()
+ax2.plot(t, b, 'r.')
+ax2.set_ylabel('nivel del mar y salanidad', color='r')
+xlim=([1000,1500])
+fig.tight_layout()
 
-plt.xlim([1000,1500])
-
-plt.ylabel("")
-plt.grid(True)
 plt.show()
-
 \end{verbatim}
-\\
-\\
-\\
 
+\begin{center}
+
+\end{center}
+
+\includegraphics[width=8cm, height=8cm]{lim1.png}
 
 \begin{verbatim}
-plt.plot_date(x=df2.Ndate, y=df2.CondH, fmt="b-")
-plt.plot_date(x=df2.Ndate, y=df2.temp, fmt="r-")
 
-plt.xlim([1000,1500])
+fig, ax1 = plt.subplots()
+a=df1.Met
+b=df2.temp
+t=df1.Date
+ax1.plot(t, a, 'b-')
+ax1.set_xlabel('time (s)')
 
-plt.title("")
-plt.ylabel("")
-plt.grid(True)
+ax2 = ax1.twinx()
+ax2.plot(t, b, 'r.')
+ax2.set_ylabel('nivel del mar y temperatura', color='r')
+fig.tight_layout()
+xlim=([1000,1500])
+
 plt.show()
 \end{verbatim}
+
+\end{center}
+
+\includegraphics[width=8cm, height=8cm]{lim2.png}
+
+\begin{verbatim}
 
 Esta instrucción hace más chica la imagen para poder enfocarnos en una parte más específica de la gráfica.
 
